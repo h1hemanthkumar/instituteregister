@@ -1,0 +1,324 @@
+/* Navbar Styles */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.542); /* Slightly transparent navbar */
+    position: fixed; /* Sticks to the top */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures navbar is above other content */
+    transition: background-color 0.3s ease; /* Smooth transition for background */
+}
+.nav{
+    color:white;
+}
+#textlogo
+{   width:250px;
+}
+#te
+{   font-family: 'Matura MT Script Capitals', cursive;
+}
+.navbar-scrolled {
+    background-color: rgba(0, 0, 0, 0.8); /* Adjusted for when scrolled */
+}
+
+.navbar-collapse {
+    text-align: center; /* Centers the collapsed navbar items */
+}
+
+/* Main Section (Background) */
+#mid {
+    background-image: url('https://cdn.wallpapersafari.com/22/53/IOfeHw.jpg');
+    background-repeat: no-repeat; /* Corrected to "no-repeat" */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Overlay for background image dimming */
+#mid::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dim overlay */
+    z-index: -1;
+}
+.a
+{
+    color: rgb(255, 255, 255); /* Main text color (white) */
+    position: relative;
+    z-index: 2; /* Ensures content is above the dimmed background */
+}
+/* .main {
+    color: rgb(255, 255, 255); 
+    position: relative;
+    z-index: 2; 
+} */
+
+
+#topname,#midname
+{   font-family:"Bauhaus 93";
+}
+
+#ig {
+    width: 70px;
+    border-radius: 50%;
+}
+
+/* Professional Text */
+#profe {
+    font-family: "Lucida Handwriting";
+}
+
+/* Skill Image Sizing */
+.skills-im {
+    height: 300px;
+    width: 300px;
+}
+
+/* Underlined text */
+#under {
+    border-bottom-width: 3px;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+    display: inline;
+}
+
+/* Social Media Button Styles */
+.fi {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+}
+
+
+
+.slide img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out;
+    border-radius:20px;
+}
+
+.slider {
+    height: 250px;
+    margin: auto;
+    position: relative;
+    width: 90%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.slide-track {
+    display: flex;
+    width: calc(250px * 18 * 5); 
+    animation: scroll 40s linear infinite;
+}
+
+.slide-track:hover {
+    animation-play-state: paused; 
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * 18)); 
+    }
+}
+
+.slide {
+    height: 200px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+
+.slide:hover img {
+    transform: scale(1.2);
+    z-index: 10;
+}
+
+
+.slider::before, .slider::after {
+    /* background: linear-gradient(to right, rgb(191, 147, 147) 0%, rgba(229, 192, 192, 0) 100%); */
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 15%;
+    z-index: 2;
+}
+
+.slider::before {
+    left: 0;
+    top: 0;
+}
+
+.slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+#abouttxt
+{   text-align:justify;
+    font-size:larger;
+}
+@media (max-width: 992px) {
+    #back {
+        background-image: url('../images/backthing.png');
+        background-size: cover;
+        background-position: center;
+        position: relative; /* Make #back the reference for positioning */
+        color:white;
+    }
+
+    #back::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(6, 34, 91, 0.803); /* Black overlay */
+        z-index: 1; /* Make sure the overlay stays above the background */
+        pointer-events: none; /* Ensure it's non-interactive */
+    }
+
+    /* If you have text or content inside #back, use this to layer it */
+    #back * {
+        position: relative;
+        z-index: 2; /* Content above the overlay */
+    }
+}
+#register {
+    background: url("../images/registerthing.jpeg") no-repeat center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index:1; 
+    }
+    #topoverlay::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.493); /* Dim overlay with black color */
+        z-index:0; /* Ensure overlay is above the background but below content */
+    }
+    h1, h2 {
+    text-transform: uppercase;
+    font-weight: 400;
+    }
+    h2 {
+    margin: 0 0 0 8px;
+    }
+    .main-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 25px;
+    background: rgba(0, 0, 0, 0.5); 
+    }
+    .left-part, form {
+    padding: 25px;
+    }
+    .left-part {
+    text-align: center;
+    }
+    .fa-graduation-cap {
+    font-size: 72px;
+    }
+    #form {
+    background: rgba(0, 0, 0, 0.7); 
+    }
+    .title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    }
+    .info {
+    display: flex;
+    flex-direction: column;
+    }
+    #input, select {
+    padding: 5px;
+    margin-bottom: 30px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #eee;
+    }
+    #input::placeholder {
+    color: #eee;
+    }
+    option:focus {
+    border: none;
+    }
+    option {
+    background: black; 
+    border: none;
+    color:white;
+    }
+    select{
+        color:white;
+    }
+    #input
+    {   color:white;
+    }
+    .btn-item, button {
+    padding: 10px 5px;
+    margin-top: 20px;
+    border-radius: 5px; 
+    border: none;
+    background: #26a9e0; 
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+    }
+    .btn-item {
+    display: inline-block;
+    margin: 20px 5px 0;
+    }
+    #button {
+    width: 100%;
+    }
+    #button:hover, .btn-item:hover {
+    background: #85d6de;
+    }
+    @media (min-width: 568px) {
+    html, body {
+    height: 100%;
+    }
+    .main-block {
+    flex-direction: row;
+    height: calc(100% - 50px);
+    }
+    .left-part, form {
+    flex: 1;
+    height: auto;
+    }
+    }
+    #register
+    {   color:white;
+    }
+    .info
+    {   color:white;
+    }
+    #footer
+    {   background-color:black;
+    }
